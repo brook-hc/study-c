@@ -1,0 +1,31 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+
+        {
+            "name": "g++.exe - 生成和调试活动文件",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "e:\\vscode\\c-study\\execute\\${fileBasenameNoExtension}.exe",  //这是生成可执行文件的路径，${fileDirname}表示现在正打开的文件目录，即生成的exe文件保存的地址，可自行修改。${fileBasenameNoExtension}.exe表示生成与要编译的cpp文件名一样的可执行文件。
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "E:\\mingw64\\bin",
+            "environment": [],
+            "externalConsole": false,  //设置为true就会额外弹出一个终端，和windows上的vs一样。
+            "MIMode": "gdb",
+            "miDebuggerPath": "E:\\mingw64\\bin\\gdb.exe",
+            "setupCommands": [
+                {
+                    "description": "为 gdb 启用整齐打印",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ],
+            "preLaunchTask": "C/C++: g++.exe build active file"
+        }
+    ]
+}

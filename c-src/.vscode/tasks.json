@@ -1,0 +1,27 @@
+{
+	"version": "2.0.0",  //task就相当于配置编译器，打开方式ctrl+shift+p，输入tasks，选择“配置默认测试任务”。
+	"tasks": [
+		{
+			"type": "cppbuild",
+			"label": "C/C++: g++.exe build active file",
+			"command": "E:\\mingw64\\bin\\g++.exe",
+			"args": [  //完整语法：g++ -g main.cpp -o input.exe(-g后面是要编译的文件名，-o后面的名字自己取)
+				"-g",    //-g不仅编译还生成可调试的功能。
+				"${file}",
+				"-o",   //编译后的exe文件叫什么名字。
+				"e:\\vscode\\c-study\\execute\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "E:\\mingw64\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"detail": "compiler: E:\\mingw64\\bin\\g++.exe"
+		}
+	]
+}
